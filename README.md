@@ -1,0 +1,2 @@
+# gogen
+go generic

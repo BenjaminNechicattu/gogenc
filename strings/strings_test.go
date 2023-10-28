@@ -7,7 +7,7 @@ import (
 )
 
 func TestReverse(t *testing.T) {
-	testString := "benjamin"
+	testString := "benjaminNechicattu"
 	expected := "nimajneb"
 	resp := Reverse(testString)
 	require.Equal(t, expected, resp)

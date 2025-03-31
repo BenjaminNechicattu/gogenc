@@ -4,4 +4,5 @@ use (
 	./compare
 	./examples
 	./strings
+	./env
 )

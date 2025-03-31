@@ -6,7 +6,7 @@ import (
 	"github.com/BenjaminNechicattu/gogenc/env"
 )
 
-func EnvExamples() {
+func envExamples() {
 	log.Println("------------------ env -----------------")
 
 	val, err := env.GetEnv("TEST_ENV", "default")

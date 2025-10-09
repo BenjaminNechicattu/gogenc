@@ -1,6 +1,6 @@
 Hello,
 
-We welcome contributions to gogenc. Please consider incorporating any missing features or functions. Here are some areas where contributions would be particularly valuable:
+We welcome contributions to gogenc. Please consider incorporating any missing features or functions. We encourage Hacktoberfest contributions. Here are some areas where contributions would be particularly valuable:
 
 Potential Contribution Areas:
 

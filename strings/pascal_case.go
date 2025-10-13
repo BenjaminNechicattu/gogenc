@@ -23,13 +23,13 @@ func ensureInitialized() {
 func loadDictionary() {
 	_, filename, _, ok := runtime.Caller(0)
 	if !ok {
-		panic("runtime.Caller failed")
+		panic("loadDictionary: failed to determine current file path using runtime.Caller; cannot locate dictionary file (20k.txt). This may indicate an unusual runtime environment or build configuration.")
 	}
 	dir := filepath.Dir(filename)
 	filePath := filepath.Join(dir, "20k.txt")
 	file, err := os.Open(filePath)
 	if err != nil {
-		panic(err)
+		panic("loadDictionary: failed to open dictionary file at " + filePath + ": " + err.Error() + ". This file is required for word segmentation functionality.")
 	}
 	defer file.Close()
 
@@ -41,7 +41,7 @@ func loadDictionary() {
 		}
 	}
 	if err := scanner.Err(); err != nil {
-		panic(err)
+		panic("loadDictionary: error reading dictionary file content: " + err.Error() + ". The dictionary file may be corrupted or unreadable.")
 	}
 }
 
